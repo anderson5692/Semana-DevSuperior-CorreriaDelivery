@@ -2,15 +2,25 @@ package com.correriadelivery.CorreriaDelivery.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_product")
 public class Product implements Serializable {
 	
-	private static final long serialversionUID = 1L;
+	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private Double price;
 	private String description;
-	private String imageuri;
+	private String imageUri;
 	
 	public Product() {
 }
@@ -21,7 +31,7 @@ public class Product implements Serializable {
 		this.name = name;
 		this.price = price;
 		this.description = description;
-		this.imageuri = imageuri;
+		this.imageUri = imageuri;
 	}
 
 	public Long getId() {
@@ -57,11 +67,11 @@ public class Product implements Serializable {
 	}
 
 	public String getImageuri() {
-		return imageuri;
+		return imageUri;
 	}
 
 	public void setImageuri(String imageuri) {
-		this.imageuri = imageuri;
+		this.imageUri = imageuri;
 	}
 
 	@Override
