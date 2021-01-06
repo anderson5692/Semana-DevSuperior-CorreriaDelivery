@@ -1,5 +1,7 @@
 package com.correriadelivery.CorreriaDelivery.entities;
 
+import java.io.Serializable;
+
 public class Product implements Serializable {
 	
 	private static final long serialversionUID = 1L;
