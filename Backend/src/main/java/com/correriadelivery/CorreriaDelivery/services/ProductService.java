@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.correriadelivery.CorreriaDelivery.dto.ProductDTO;
 import com.correriadelivery.CorreriaDelivery.entities.Product;
 import com.correriadelivery.CorreriaDelivery.repositories.ProductRepository;
+
 @Service
 public class ProductService {
 	
@@ -19,7 +20,7 @@ public class ProductService {
 	@Transactional(readOnly = true)
 	public List<ProductDTO> findAll(){
 		List<Product> list = repository.findAllByOrderByNameAsc();
-		return list.stream().map(x -> new ProductDTO(x)).collect(collectors.toList());
+		return list.stream().map(x -> new ProductDTO(x)).collect(Collectors.toList());
 	
 	}
 }
