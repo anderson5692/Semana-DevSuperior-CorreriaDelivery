@@ -1,3 +1,4 @@
+import 'leaflet/dist/leaftlet.css';
 import {useState} from 'react';
 import{ MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import AsyncSelect from 'react-select';
