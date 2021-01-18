@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import StepsHeader from './StepsHeader';
 import ProductsList from './ProductsList';
 import { OrderLocationData, Product } from "./types";
-import { fetchProducts, saveOrder } from './api';
+import { fetchProducts, saveOrder } from '../api';
 import OrderLocation from './OrderLocation';
 import OrderSummary from './OrderSummary';
 import Footer from '../Footer';
