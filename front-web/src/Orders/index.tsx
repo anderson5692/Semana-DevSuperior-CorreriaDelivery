@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 import StepsHeader from './StepsHeader';
 import ProductsList from './ProductsList';
 import { OrderLocationData, Product } from "./types";
@@ -23,7 +23,7 @@ function Orders() {
         fetchProducts()
         .then(response => setProducts(response.data))
         .catch(() => {
-          <toast.warning('Erro ao listar produtos');
+           toast.warning('Erro ao listar produtos');
         })
 }, []);
 
@@ -45,7 +45,8 @@ const handleSelectProduct = (product: Product) => {
       products: productsIds
     }
   
-    saveOrder(payload).then((response) => {
+    saveOrder(payload)
+    .then((response) => {
       toast.error(`Pedido enviado com sucesso! Nº ${response.data.id}`);
       setSelectedProducts([]);
     })
